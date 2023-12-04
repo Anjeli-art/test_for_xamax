@@ -41,7 +41,7 @@
 
 задание выполнено за два рабочих дня
 
-ссылка на bild ghp
+ссылка на bild ghp https://anjeli-art.github.io/test_for_xamax/
 
 
 

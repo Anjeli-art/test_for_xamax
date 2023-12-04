@@ -7,6 +7,7 @@ import {Wallet} from "./components/Wallet/Wallet";
 import {Form} from "./components/Form/Form";
 import {Button} from "./components/Button/Button";
 import readXlsxFile from "read-excel-file";
+import {WALLET_ROW} from "./utils/enum";
 
 export type DataType = {
     id: string;
@@ -76,53 +77,30 @@ const App: React.FC = () => {
 
 
     const changeAmountValue = (e: ChangeEvent<HTMLInputElement>, id: string) => {
-        console.log(e.currentTarget.value)
-
-
         let amountValue = e.currentTarget.value
         const newData = data.map((fields) =>
             id === fields.id ? {...fields, walletAmount: amountValue} : fields
         );
-
         setData(newData);
     };
 
-    // const onKeyDown=(e:React.KeyboardEvent<HTMLInputElement>) => {
-    //
-    //     if (e.keyCode == 189 ||
-    //         e.keyCode == 190 ||
-    //         e.keyCode == 188 ||
-    //         e.keyCode == 46 ||
-    //         e.keyCode == 8 ||
-    //         e.keyCode == 9 ||
-    //         e.keyCode == 27 ||
-    //         (e.keyCode == 65 && e.ctrlKey) ||
-    //         (e.keyCode >= 35 && e.keyCode <= 39)
-    //     ) {
-    //         return;
-    //     } else {
-    //         if (
-    //             (e.keyCode < 48 || e.keyCode > 57) &&
-    //             (e.keyCode < 96 || e.keyCode > 105)
-    //         ) {
-    //             e.preventDefault();
-    //         }
-    //     }
-    // }
 
     const onKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        console.log(e.keyCode)
-        let success = e.keyCode == 190 || e.keyCode == 188 || e.keyCode == 46
-            || e.keyCode == 8 || e.keyCode == 9 || e.keyCode == 27 ||
+        if (e.keyCode == 190 ||
+            e.keyCode == 188 ||
+            e.keyCode == 46 ||
+            e.keyCode == 8 ||
+            e.keyCode == 9 ||
+            e.keyCode == 27 ||
             (e.keyCode == 65 && e.ctrlKey) ||
             (e.keyCode >= 35 && e.keyCode <= 39)
-
-        let failure = (e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 96 || e.keyCode > 105) && e.keyCode == 189
-
-        if (success) {
+        ) {
             return;
         } else {
-            if (failure) {
+            if (
+                (e.keyCode < 48 || e.keyCode > 57) &&
+                (e.keyCode < 96 || e.keyCode > 105)
+            ) {
                 e.preventDefault();
             }
         }
@@ -153,9 +131,9 @@ const App: React.FC = () => {
 
                 const newData = rows.slice(2).map(wallet => ({
                     id: v1(),
-                    walletNumber: String(wallet[0]),
-                    walletAmount: String(wallet[1]) ?? "",
-                    currency: String(wallet[2]) ?? ""
+                    walletNumber: String(wallet[WALLET_ROW.ROW_ZERO]),
+                    walletAmount: String(wallet[WALLET_ROW.ROW_ONE]) ?? "",
+                    currency: String(wallet[WALLET_ROW.ROW_TWO]) ?? ""
                 }))
 
                 setData(newData)
