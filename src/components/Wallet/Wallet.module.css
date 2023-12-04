@@ -1,0 +1,52 @@
+.wallet {
+  border: 1px solid #f5f4f4;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.walletContent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.walletInfo {
+  display: flex;
+  align-items: center;
+}
+
+.walletCircle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #6c7076;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.walletText {
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.walletBalance {
+  display: flex;
+}
+
+.walletValue {
+  font-weight: 500;
+  color: #61a98b;
+}
+
+.walletCoin {
+  font-weight: 500;
+  color: #61a98b;
+  position: relative;
+}
+
+.walletNumber {
+  font-size: 14px;
+  text-align: left;
+}

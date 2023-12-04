@@ -1,4 +1,4 @@
-import {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
+import React, {ButtonHTMLAttributes, DetailedHTMLProps} from "react";
 import s from './Button.module.css';
 import classNames from 'classnames/bind';
 
@@ -10,9 +10,11 @@ type ButtonType =DefaultButtonPropsType &{
     variant?:string
 }
 
+
+
 const cx = classNames.bind(s);
 
-export const Button =({children,disabled,variant,onClick}:ButtonType)=>{
+export const Button: React.FC<ButtonType> =React.memo(({children,disabled,variant,onClick})=>{
 
     const ButtonClass = cx({
         buttonRemove:variant === "remove",
@@ -26,4 +28,4 @@ export const Button =({children,disabled,variant,onClick}:ButtonType)=>{
         <button onClick={onClick} disabled={disabled} className={ButtonClass}>
             {children}
         </button>)
-}
+})

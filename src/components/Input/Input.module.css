@@ -12,6 +12,13 @@
     margin: 5px 0 20px;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+     margin: 0;
+    -moz-appearance: textfield}
+
+
 .inputAmount {
    padding: 5px 48px 5px 5px;
 }
@@ -31,5 +38,14 @@
 
 .currencyInput{
     position: absolute;
-    right:0
+    right:5px;
+    bottom:22px;
+}
+
+.borderInput{
+    width: 85%;
+    position: absolute;
+    right:50px;
+    bottom:27px;
+    border: 1px solid #f5f4f4;
 }
