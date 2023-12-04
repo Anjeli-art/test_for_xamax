@@ -1,0 +1,35 @@
+.inputWallet,
+.inputAmount {
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    border: 1px solid #f5f4f4;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.inputWallet {
+    margin: 5px 0 20px;
+}
+
+.inputAmount {
+   padding: 5px 48px 5px 5px;
+}
+
+.inputWallet,
+.inputAmount:focus {
+    outline: none;
+}
+
+.inputWallet::placeholder {
+    color: #f5f4f4;
+}
+
+.inputAmount::placeholder {
+    color: #f5f4f4;
+}
+
+.currencyInput{
+    position: absolute;
+    right:0
+}

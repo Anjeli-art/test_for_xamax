@@ -1,0 +1,30 @@
+.buttonRemove {
+    background-color: transparent;
+    border: none;
+    color: #eba29f;
+}
+
+.buttonClear {
+    background-color: transparent;
+    border: none;
+    color: #cfd4d9;
+}
+
+.buttonAdd {
+    background-color: transparent;
+    border: none;
+    color: #3478f6;
+}
+
+.buttonSubmit {
+    background-color: #526d79;
+    border: none;
+    border-radius: 5px;
+    color: #d4d8dd;
+    padding: 8px 22px;
+}
+
+.buttonSubmit:disabled {
+    background-color: #d4d8dd;
+    color: #fafbfb;
+}
