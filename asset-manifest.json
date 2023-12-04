@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/test_for_xamax/static/css/main.97cf6d64.css",
-    "main.js": "/test_for_xamax/static/js/main.439402f8.js",
+    "main.js": "/test_for_xamax/static/js/main.a859ca6a.js",
     "static/js/787.f054aae3.chunk.js": "/test_for_xamax/static/js/787.f054aae3.chunk.js",
     "index.html": "/test_for_xamax/index.html",
     "main.97cf6d64.css.map": "/test_for_xamax/static/css/main.97cf6d64.css.map",
-    "main.439402f8.js.map": "/test_for_xamax/static/js/main.439402f8.js.map",
+    "main.a859ca6a.js.map": "/test_for_xamax/static/js/main.a859ca6a.js.map",
     "787.f054aae3.chunk.js.map": "/test_for_xamax/static/js/787.f054aae3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.97cf6d64.css",
-    "static/js/main.439402f8.js"
+    "static/js/main.a859ca6a.js"
   ]
 }
